@@ -1118,7 +1118,7 @@ public class A2dpService extends ProfileService {
                     final boolean isMandatoryCodecWithDualChannel = config.isMandatoryCodec()
                             && (config.getChannelMode() & config.CHANNEL_MODE_DUAL_CHANNEL)
                                     == config.CHANNEL_MODE_DUAL_CHANNEL;
-                    if (config.isMandatoryCodec() || !isMandatoryCodecWithDualChannel) {
+                    if (config.isMandatoryCodec() && !isMandatoryCodecWithDualChannel) {
                         hasMandatoryCodec = true;
                     } else {
                         supportsOptional = true;
